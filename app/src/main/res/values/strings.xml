@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">mxsmpl</string>
+    <string name="prompt_email">Электронная почта</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войти</string>
+    <string name="action_sign_in_short">Войти</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
