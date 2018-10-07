@@ -4,8 +4,11 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
+        android:name=".base.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,7 +25,16 @@
         <activity
             android:name=".ui.MainActivity.MainActivity"
             android:label="Rect"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.PhotosActivity.PhotosActivity"
+            android:label="Rect"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.DocumentsActivity.DocsActivity"
+            android:label="Rect"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

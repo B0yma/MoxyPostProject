@@ -1,4 +1,4 @@
-package com.boyma.mxsmpl.ui.MainActivity;
+package com.boyma.mxsmpl.ui.DocumentsActivity;
 
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
@@ -14,15 +14,15 @@ import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
 @InjectViewState
-public class MainActivityPresenter extends MvpPresenter<IMainActivityView>{
+public class DocsActivityPresenter extends MvpPresenter<IDocsActivityView>{
 
     private JsonPlaceHolderRepo jsonPlaceHolderRepo;
     private boolean isLoading = false;
     private List<ResponseJsonObj> postList = new ArrayList<>();
-    private int idtype1;
+    private Integer idtype1;
 
 
-    public MainActivityPresenter() {
+    public DocsActivityPresenter() {
         jsonPlaceHolderRepo = new JsonPlaceHolderRepo();
         initView();
     }
@@ -80,11 +80,12 @@ public class MainActivityPresenter extends MvpPresenter<IMainActivityView>{
         }else {
             getViewState().showToast("No connection");
         }*/
-        getViewState().startDocsActivity(postList.get(position).getId());
+        getViewState().startPhotosActivity(idtype1,postList.get(position).getId());
     }
 
 
-    public void onCreate(int idtype1) {
-        this.idtype1 = idtype1;
+    public void onCreate(int oidtype1) {
+        this.idtype1 = oidtype1;
+        getViewState().showToast(String.valueOf(idtype1));
     }
 }

@@ -25,6 +25,7 @@ public class LoginActivity extends MvpAppCompatActivity implements ILoginActivit
 
         initUI();
 
+
     }
 
     private void initUI() {

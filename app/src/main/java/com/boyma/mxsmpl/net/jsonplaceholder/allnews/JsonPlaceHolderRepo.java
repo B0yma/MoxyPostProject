@@ -1,7 +1,7 @@
-package com.boyma.mxsmpl.data.jsonplaceholder.allnews;
+package com.boyma.mxsmpl.net.jsonplaceholder.allnews;
 
 
-import com.boyma.mxsmpl.data.jsonplaceholder.allnews.models.ResponseJsonObj;
+import com.boyma.mxsmpl.net.jsonplaceholder.allnews.models.ResponseJsonObj;
 
 import java.util.List;
 

@@ -7,10 +7,10 @@ import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.boyma.mxsmpl.R;
 
-public class MainActivity extends MvpAppCompatActivity implements IMainActivityView {
+public class PATTERNActivity extends MvpAppCompatActivity implements IPATTERNActivityView {
 
     @InjectPresenter
-    MainActivityPresenter mpresenter;
+    PATTERNActivityPresenter mpresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

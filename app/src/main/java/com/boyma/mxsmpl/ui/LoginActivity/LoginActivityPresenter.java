@@ -2,7 +2,7 @@ package com.boyma.mxsmpl.ui.LoginActivity;
 
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
-import com.boyma.mxsmpl.data.jsonplaceholder.allnews.JsonPlaceHolderRepo;
+import com.boyma.mxsmpl.net.jsonplaceholder.allnews.JsonPlaceHolderRepo;
 
 @InjectViewState
 public class LoginActivityPresenter extends MvpPresenter<ILoginActivityView>{

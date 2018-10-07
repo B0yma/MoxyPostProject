@@ -1,4 +1,4 @@
-package com.boyma.mxsmpl.ui.MainActivity;
+package com.boyma.mxsmpl.ui.adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.boyma.mxsmpl.R;
-import com.boyma.mxsmpl.data.jsonplaceholder.allnews.models.ResponseJsonObj;
-import com.squareup.picasso.Picasso;
+import com.boyma.mxsmpl.net.jsonplaceholder.allnews.models.ResponseJsonObj;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +31,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.NewsViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull NewsViewHolder holder, int position) {
-        holder.title.setText(data.get(position).getTitle());
+        holder.title.setText(String.valueOf(data.get(position).getId()));
         holder.body.setText(data.get(position).getBody());
     }
 

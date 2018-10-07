@@ -1,5 +1,5 @@
 
-package com.boyma.mxsmpl.data.jsonplaceholder.allnews.models;
+package com.boyma.mxsmpl.net.jsonplaceholder.allnews.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

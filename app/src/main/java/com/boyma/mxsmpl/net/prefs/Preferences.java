@@ -1,4 +1,4 @@
-package com.boyma.mxsmpl.data.prefs;
+package com.boyma.mxsmpl.net.prefs;
 
 import android.content.Context;
 import android.content.SharedPreferences;

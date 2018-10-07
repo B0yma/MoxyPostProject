@@ -1,4 +1,4 @@
-package com.boyma.mxsmpl.data.prelolipopSSL;
+package com.boyma.mxsmpl.net.prelolipopSSL;
 
 import android.os.Build;
 import android.util.Log;

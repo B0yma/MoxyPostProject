@@ -1,4 +1,4 @@
-package com.boyma.mxsmpl.ui.MainActivity;
+package com.boyma.mxsmpl.ui.DocumentsActivity;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -17,15 +17,15 @@ import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.boyma.mxsmpl.R;
 import com.boyma.mxsmpl.net.jsonplaceholder.allnews.models.ResponseJsonObj;
-import com.boyma.mxsmpl.ui.DocumentsActivity.DocsActivity;
+import com.boyma.mxsmpl.ui.PhotosActivity.PhotosActivity;
 import com.boyma.mxsmpl.ui.adapters.RecAdapter;
 
 import java.util.List;
 
-public class MainActivity extends MvpAppCompatActivity implements IMainActivityView {
+public class DocsActivity extends MvpAppCompatActivity implements IDocsActivityView {
 
     @InjectPresenter
-    MainActivityPresenter mpresenter;
+    DocsActivityPresenter mpresenter;
     private RecyclerView rec_view;
     private TextView logtv;
     private LinearLayoutManager mLayoutManager;
@@ -39,6 +39,8 @@ public class MainActivity extends MvpAppCompatActivity implements IMainActivityV
         setContentView(R.layout.activity_main);
         Toolbar toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        mpresenter.onCreate(getIntent().getIntExtra("idtype1",-1));
 
         initUI();
 
@@ -118,11 +120,14 @@ public class MainActivity extends MvpAppCompatActivity implements IMainActivityV
     }
 
     @Override
-    public void startDocsActivity(Integer id) {
-        Intent intent = new Intent(this,DocsActivity.class);
-        intent.putExtra("idtype1",id);
+    public void startPhotosActivity(int idtype1, Integer idtype2) {
+
+        Intent intent = new Intent(this,PhotosActivity.class);
+        intent.putExtra("idtype1",idtype1);
+        intent.putExtra("idtype2",idtype2);
         startActivity(intent);
     }
+
 
     //=================================
     class RecyclerTouchListener implements RecyclerView.OnItemTouchListener{
@@ -171,8 +176,8 @@ public class MainActivity extends MvpAppCompatActivity implements IMainActivityV
     }
 
     public interface ClickListener{
-        void onClick(View view,int position);
-        void onLongClick(View view,int position);
+        void onClick(View view, int position);
+        void onLongClick(View view, int position);
     }
     //=================================
 }
